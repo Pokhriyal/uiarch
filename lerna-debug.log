@@ -1,0 +1,56 @@
+0 silly argv { _: [ 'version' ],
+0 silly argv   'conventional-commits': true,
+0 silly argv   conventionalCommits: true,
+0 silly argv   yes: true,
+0 silly argv   y: true,
+0 silly argv   lernaVersion: '3.18.4',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js' }
+1 notice cli v3.18.4
+2 verbose rootPath E:\POC
+3 info current version 0.0.0
+4 silly isAnythingCommitted
+5 error Error: Command failed: git rev-list --count --all --max-count=1
+5 error usage: git rev-list [OPTION] <commit-id>... [ -- paths... ]
+5 error   limiting output:
+5 error     --max-count=<n>
+5 error     --max-age=<epoch>
+5 error     --min-age=<epoch>
+5 error     --sparse
+5 error     --no-merges
+5 error     --min-parents=<n>
+5 error     --no-min-parents
+5 error     --max-parents=<n>
+5 error     --no-max-parents
+5 error     --remove-empty
+5 error     --all
+5 error     --branches
+5 error     --tags
+5 error     --remotes
+5 error     --stdin
+5 error     --quiet
+5 error   ordering output:
+5 error     --topo-order
+5 error     --date-order
+5 error     --reverse
+5 error   formatting output:
+5 error     --parents
+5 error     --children
+5 error     --objects | --objects-edge
+5 error     --unpacked
+5 error     --header | --pretty
+5 error     --abbrev=<n> | --no-abbrev
+5 error     --abbrev-commit
+5 error     --left-right
+5 error     --count
+5 error   special purpose:
+5 error     --bisect
+5 error     --bisect-vars
+5 error     --bisect-all
+5 error
+5 error
+5 error     at makeError (E:\POC\node_modules\execa\index.js:174:9)
+5 error     at Function.module.exports.sync (E:\POC\node_modules\execa\index.js:338:15)
+5 error     at Object.execSync (E:\POC\node_modules\@lerna\child-process\index.js:26:16)
+5 error     at isAnythingCommitted (E:\POC\node_modules\@lerna\version\lib\is-anything-committed.js:11:35)
+5 error     at VersionCommand.initialize (E:\POC\node_modules\@lerna\version\index.js:108:12)
+5 error     at Promise.resolve.then (E:\POC\node_modules\@lerna\command\index.js:271:24)
