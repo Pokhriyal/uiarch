@@ -5,12 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.2](https://github.com/Pokhriyal/uiarch/compare/v1.0.1...v1.0.2) (2019-11-19)
 
-**Note:** Version bump only for package root
-
-
-
-
-
-## 1.0.1 (2019-11-19)
-
-**Note:** Version bump only for package root
+**Note:** Version bump only for package web
