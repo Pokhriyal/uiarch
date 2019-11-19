@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "lerna run test --scope={@walnut/server, @walnut/common}",
+    "test": "lerna run test --scope={@walnut/common,@walnut/server}",
     "new-version": "lerna version --conventional-commits --yes",
     "diff": "lerna diff"
   },
