@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
@@ -22,7 +22,7 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
-import { green, orange, purple } from '@material-ui/core/colors';
+
 
 function Copyright() {
   return (
@@ -40,19 +40,7 @@ function Copyright() {
 const drawerWidth = 240;
 
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: "#7986cb",
-      main: "#34a751",
-      dark: "#303f9f",
-      contrastText: "#fff",
-    },
-    secondary: {
-      main: '#fff',
-    },
-  },
-});
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -145,7 +133,7 @@ export default function Dashboard() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <ThemeProvider  theme={theme}>
+    
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
@@ -215,6 +203,5 @@ export default function Dashboard() {
         </Container>
       </main>
     </div>
-    </ThemeProvider>
   );
 }
