@@ -36,7 +36,7 @@ const Dashboard = () => {
       <FilterPanel />
       <Grid
         container
-        spacing={3}
+        spacing={2}
       >
         <Grid
           item
