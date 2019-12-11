@@ -26,10 +26,6 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     
   },
-  subFontSize: {
-    fontSize: '16px',
-    fontWeight: 'bold',
-  },
   CardHeight: {
     height: '100%'
   },
@@ -56,7 +52,7 @@ export default function ReadingCard() {
         </div>
         <Grid container className={`${classes.upperCardSubContainer} ${classes.CardInnerHeight}`}>
           <Grid item xs={6} className={`${classes.borderRight} ${classes.subMargin}`}>
-            <Typography component="p" variant="h2" className={classes.subFontSize}  >
+            <Typography component="p" variant="h4" className={classes.subFontSize}  >
               $3,024.00
             </Typography>
             <Typography variant="caption" display="block" >
@@ -64,7 +60,7 @@ export default function ReadingCard() {
             </Typography>
           </Grid>
           <Grid item xs={6} className={`${classes.borderRight} ${classes.subMargin}`}>
-            <Typography component="p" variant="h2" className={classes.subFontSize} >
+            <Typography component="p" variant="h4" >
               $3,024.00
             </Typography>
             <Typography variant="caption" display="block" >
