@@ -9,13 +9,21 @@ const useStyles = makeStyles(theme => ({
         display: 'flex'
     },
     space: {
-        marginRight: '12px'
+        marginRight: '12px',
+        '& h6': {
+            fontSize: '13px',
+            color: '#707070',
+        }
     },
     bdypadding : {
         padding: '15px'
     },
-    textRight: {
-        textAlign: 'right'
+    textRight: {       
+        textAlign: 'right',
+        '& button': {
+            fontSize: '12px',
+            textTransform: 'capitalize',
+        }
         
     }
 }));
@@ -52,7 +60,16 @@ export default function FilterPanel() {
                         </div>
                     </Grid>
                     <Grid item xs={6} className={classes.textRight}>
-                        <Button variant="outlined"><AddIcon />Add Filters</Button>
+                        {/* <Button variant="outlined" size="small" color="primary"><AddIcon />Add Filters</Button> */}
+                        <Button
+                            variant="contained"
+                            color="default"
+                            size="small"
+                            className={classes.button}
+                            startIcon={<AddIcon />}
+                        >
+                            Add Filters
+                        </Button>
                     </Grid>
                 </Grid>
             </div>
