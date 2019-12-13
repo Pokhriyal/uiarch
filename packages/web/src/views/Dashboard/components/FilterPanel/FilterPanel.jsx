@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     },
     list: {
         width: 350,
-      },
+    },
     space: {
         marginRight: '12px',
         '& h6': {
@@ -28,13 +28,25 @@ const useStyles = makeStyles(theme => ({
     bdypadding: {
         padding: '15px'
     },
-    textRight: {       
+    textRight: {
         textAlign: 'right',
         '& button': {
             fontSize: '12px',
             textTransform: 'capitalize',
         }
-        
+
+    },
+    filterDrawerTop: {
+        padding: '10px',
+        borderBottom: '1px solid #dedede'
+    },
+    filterDrawerCta: {
+        position: 'absolute',
+        bottom: '0',
+        borderTop: '1px solid #dedede',
+        width: '100%',
+        textAlign: 'right',
+        padding: '5px',
     }
 }));
 export default function FilterPanel() {
@@ -59,11 +71,26 @@ export default function FilterPanel() {
             onClick={toggleDrawer(side, false)}
             onKeyDown={toggleDrawer(side, false)}
         >
-           <div>
-           <Typography variant="body2">
-                                <b>Filters</b>
-            </Typography>
-           </div>
+            <div>
+                <div>
+                    <Typography variant="h4" className={classes.filterDrawerTop}>
+                        Filters
+                    </Typography>
+                </div>
+                <div>
+                    Lists
+                </div>
+                <div className={classes.filterDrawerCta}>
+                    <div>
+                  
+                        <Button variant="contained">Cancel</Button>
+                        <Button variant="contained">Reset</Button>
+                        <Button variant="contained" color="primary">
+                            Apply
+                        </Button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
     return (
@@ -99,10 +126,10 @@ export default function FilterPanel() {
                     <Grid item xs={6} className={classes.textRight}>
                         <Button onClick={toggleDrawer('right', true)} variant="outlined"><AddIcon />Add Filters</Button>
                         <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
-                        {sideList('right')}
-                    </Drawer>
+                            {sideList('right')}
+                        </Drawer>
                     </Grid>
-                   
+
                 </Grid>
             </div>
         </div>
