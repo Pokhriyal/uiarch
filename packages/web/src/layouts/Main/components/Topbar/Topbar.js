@@ -26,8 +26,8 @@ const useStyles = makeStyles(theme => ({
   },
   MainNavigation: {
     marginLeft: '50px',
+    color: theme.palette.white,
     '& a' : {
-      color: '#797983',
       marginLeft: '32px',
       lineHeight: '60px',
       fontSize: '15px',
