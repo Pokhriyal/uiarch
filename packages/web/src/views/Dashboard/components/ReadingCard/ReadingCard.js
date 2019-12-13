@@ -68,7 +68,7 @@ export default function ReadingCard() {
             </Typography>
           </Grid>
           <Grid item xs={6} className={`${classes.borderRight} ${classes.subMargin}`}>
-            <Typography component="p" variant="h4" >
+            <Typography component="p" variant="h4" className={classes.subFontSize} >
               $3,024.00
             </Typography>
             <Typography variant="caption" display="block" >

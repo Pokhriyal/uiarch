@@ -15,6 +15,7 @@ import {
   TitleBar,
   TabExpandView
 } from './components';
+import { red } from '@material-ui/core/colors';
 const useStyles = makeStyles(theme => ({
   gridRoot: {
       width: '100%',
@@ -39,8 +40,10 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '7px',
   },
   shiftRight: {
-    marginLeft: 'auto',
+    marginLeft: 'auto',   
   },
+
+   
   flexDisplay:{
     display: 'flex',
     alignItems: 'center',
@@ -48,7 +51,26 @@ const useStyles = makeStyles(theme => ({
   },
   dashboardTitle: {
     marginLeft: '15px',
+  },
+  dropdownlist: {
+    borderLeft :'2px solid transparent',
+    '& h6' :{
+      fontSize: '14px', 
+      '& svg' : {
+        verticalAlign: 'sub',
+        fontSize: '18px',
+        marginRight: '8px',
+      }
+    },
+    '& span' : {
+      paddingLeft: '30px'
+    },
+    '&:hover' : {
+      color: '#548dfa',
+      borderLeft :'2px solid #548dfa',
+    }
   }
+  
 }));
 
 const Dashboard = () => {
@@ -135,18 +157,17 @@ const Dashboard = () => {
                 anchorEl={anchorEl}
                 keepMounted
                 open={Boolean(anchorEl)}
-                onClose={handleClose}
+                onClose={handleClose}                
               >
-                <MenuItem onClick={handleClose}>
-                  <Typography variant="subtitle1" display="block" gutterBottom>
+                <MenuItem onClick={handleClose} className={classes.dropdownlist}>
+                  <Typography variant="subtitle1" display="block" gutterBottom >
                     <AllOutIcon /> Examiner
                   <Typography variant="caption" display="block" gutterBottom>
                       Deep examine KPI for better business descisions
                 </Typography>
                   </Typography>
-
                 </MenuItem>
-                <MenuItem onClick={handleClose}>
+                <MenuItem onClick={handleClose} className={classes.dropdownlist}>
                   <Typography variant="subtitle1" display="block" >
                     <CompareIcon /> Quick Compare
                   <Typography variant="caption" display="block" >
@@ -155,17 +176,17 @@ const Dashboard = () => {
                   </Typography>
 
                 </MenuItem>
-                <MenuItem onClick={handleClose}>
+                <MenuItem onClick={handleClose} className={classes.dropdownlist}>
                   <Typography variant="subtitle1" display="block" >
                     <ShareIcon />Share
                 </Typography>
                 </MenuItem>
-                <MenuItem onClick={handleClose}>
+                <MenuItem onClick={handleClose} className={classes.dropdownlist}>
                   <Typography variant="subtitle1" display="block" >
                     <ReportProblemIcon />Alert
                 </Typography>
                 </MenuItem>
-                <MenuItem onClick={handleClose}>
+                <MenuItem onClick={handleClose} className={classes.dropdownlist}>
                   <Typography variant="subtitle1" display="block" >
                     <PublishIcon />Export
                 </Typography>
