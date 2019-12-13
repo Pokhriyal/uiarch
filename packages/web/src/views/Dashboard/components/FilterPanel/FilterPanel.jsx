@@ -31,6 +31,10 @@ const useStyles = makeStyles(theme => ({
         '& button': {
             fontSize: '12px',
             textTransform: 'capitalize',
+            '& svg' :{
+                fontSize: '17px',
+                marginRight: '3px',
+            }
         }
         
     }
@@ -110,7 +114,7 @@ export default function FilterPanel() {
                         </div>
                     </Grid>
                     <Grid item xs={6} className={classes.textRight}>
-                        <Button onClick={toggleDrawer('right', true)} variant="outlined"><AddIcon />Add Filters</Button>
+                        <Button size="small" color="default" onClick={toggleDrawer('right', true)} variant="contained"><AddIcon />Add Filters</Button>
                         <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
                         {sideList('right')}
                     </Drawer>

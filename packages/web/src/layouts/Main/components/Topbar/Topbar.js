@@ -9,6 +9,7 @@ import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
 import InputIcon from '@material-ui/icons/Input';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,7 +25,28 @@ const useStyles = makeStyles(theme => ({
     width: '116px'
   },
   MainNavigation: {
-    color: 'red',
+    marginLeft: '50px',
+    '& a' : {
+      color: '#797983',
+      marginLeft: '32px',
+      lineHeight: '60px',
+      fontSize: '15px',
+      fontWeight: '400',
+      '&:hover' : {        
+        maxHeight: '60px',
+        textDecoration: 'none',
+        display: 'inline-block',        
+        borderBottom: '2px solid #8ddedf',
+        '&:first-child' : {           
+           borderBottom: 'none'
+        }
+      },
+    },
+    
+    '& svg' : {
+      verticalAlign: 'text-bottom',
+    },
+    
     '& > * + *': {
       marginLeft: theme.spacing(4),
       
@@ -68,13 +90,19 @@ const Topbar = props => {
 
           <Typography className={classes.MainNavigation}>
             <Link href="#" onClick={preventDefault} color="inherit">
-              Link
+              <HomeIcon />
             </Link>
             <Link href="#" onClick={preventDefault} color="inherit">
-              Link
+              Dashboard
             </Link>
             <Link href="#" onClick={preventDefault} color="inherit">
-              Link
+              AskMe
+            </Link>
+            <Link href="#" onClick={preventDefault} color="inherit">
+              Self Service
+            </Link>
+            <Link href="#" onClick={preventDefault} color="inherit">
+              Data Blending
             </Link>
             {/* <Link href="#" onClick={preventDefault} color="inherit">
               {'color="inherit"'}
