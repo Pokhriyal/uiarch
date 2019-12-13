@@ -2,21 +2,26 @@ import { colors } from '@material-ui/core';
 
 const white = '#FFFFFF';
 const black = '#000000';
+const headerColor = '#202031';
+const footerColor = '#202031';
+
 
 export default {
   black,
   white,
+  headerColor,
+  footerColor,
   primary: {
     contrastText: white,
-    dark: colors.grey[900],
-    main: colors.grey[900],
-    light: colors.grey[100]
+    dark: colors.indigo[900],
+    main: colors.indigo[500],
+    light: colors.indigo[100]
   },
   secondary: {
     contrastText: white,
-    dark: colors.blue[900],
-    main: colors.blue['A400'],
-    light: colors.blue['A400']
+    dark: colors.grey[900],
+    main: colors.grey[500],
+    light: colors.grey[100]
   },
   success: {
     contrastText: white,

@@ -17,8 +17,9 @@ import {
 } from './components';
 import { red } from '@material-ui/core/colors';
 const useStyles = makeStyles(theme => ({
-  root: {
-    padding: theme.spacing(4)
+  gridRoot: {
+      width: '100%',
+      margin: '0',
   },
   paper: {
     padding: theme.spacing(2),
@@ -86,13 +87,14 @@ const Dashboard = () => {
   };
 
   return (
-    <div className={classes.root}>
+    <div>
       <TabExpandView />
       <TitleBar />
       <FilterPanel />
       <Grid
         container
-        spacing={2}
+        spacing={3}
+        className={classes.gridRoot}
       >
         <Grid
           item
@@ -216,15 +218,6 @@ const Dashboard = () => {
           <Paper className={classes.graphCard}>
 
           </Paper>
-        </Grid>
-        <Grid
-          item
-          lg={4}
-          md={12}
-          xl={9}
-          xs={12}
-        >
-          Hello
         </Grid>
       </Grid>
     </div>

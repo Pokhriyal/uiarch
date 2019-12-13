@@ -10,12 +10,14 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
-import FilterBAndWIcon from '@material-ui/icons/FilterBAndW';
 import MailIcon from '@material-ui/icons/Mail';
 const useStyles = makeStyles(theme => ({
     filter: {
         display: 'flex'
     },
+    list: {
+        width: 350,
+      },
     space: {
         marginRight: '12px',
         '& h6': {
@@ -61,26 +63,11 @@ export default function FilterPanel() {
             onClick={toggleDrawer(side, false)}
             onKeyDown={toggleDrawer(side, false)}
         >
-            <div>
-                <FilterBAndWIcon />
-            </div>
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
+           <div>
+           <Typography variant="body2">
+                                <b>Filters</b>
+            </Typography>
+           </div>
         </div>
     );
     return (
