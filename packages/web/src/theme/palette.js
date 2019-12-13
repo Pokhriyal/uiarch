@@ -4,6 +4,7 @@ const white = '#FFFFFF';
 const black = '#000000';
 const headerColor = '#202031';
 const footerColor = '#202031';
+const primaryColor ="#202031"
 
 
 export default {
@@ -13,8 +14,8 @@ export default {
   footerColor,
   primary: {
     contrastText: white,
-    dark: colors.indigo[900],
-    main: colors.indigo[500],
+    dark: primaryColor,
+    main: primaryColor,
     light: colors.indigo[100]
   },
   secondary: {
