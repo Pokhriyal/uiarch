@@ -8,15 +8,18 @@ const useStyles = makeStyles({
     flex: 1,
   },
   textCenter: {
-    textAlign: 'center'
+    textAlign: 'center',
+    '& p': {
+      fontSize: '20px',
+    }
   },
   upperCardSubContainer: {
     marginTop: '10px',
     alignItems: 'center',
   },
   borderRight: {
-    borderRight: '1px solid #dedede',
-    background: '#e8e9ee'
+    borderRight: '1px solid #eceef5',
+    background: '#f4f5f9'
   },
   subMargin: {
     paddingLeft: '25px',
@@ -26,6 +29,10 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     
   },
+  subFontSize: {
+    fontSize: '15px',
+    fontWeight: 'bold',
+  },
   CardHeight: {
     height: '100%'
   },
@@ -33,7 +40,8 @@ const useStyles = makeStyles({
     height: '50%'
   },
   subcardBtm: {
-    color: 'blue'
+    color: '#03A9F4',
+    fontSize: '13px',    
   }
 });
 export default function ReadingCard() {
@@ -68,7 +76,7 @@ export default function ReadingCard() {
             </Typography>
           </Grid>
           <Grid item xs={12} className={classes.textCenter}>
-            <Typography component="p" variant="subtitle1" className={classes.subcardBtm} >
+            <Typography component="label" variant="subtitle1" fontWeight="fontWeightMedium" className={classes.subcardBtm} >
               8.45% Higher
             </Typography>
           </Grid>

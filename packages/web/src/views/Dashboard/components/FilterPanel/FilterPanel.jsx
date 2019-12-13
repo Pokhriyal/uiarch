@@ -17,21 +17,23 @@ const useStyles = makeStyles(theme => ({
         display: 'flex'
     },
     space: {
-        marginRight: '12px'
+        marginRight: '12px',
+        '& h6': {
+            fontSize: '13px',
+            color: '#707070',
+        }
     },
     bdypadding: {
         padding: '15px'
     },
-    textRight: {
-        textAlign: 'right'
-
-    },
-    list: {
-        width: 250,
-      },
-      fullList: {
-        width: 'auto',
-      },
+    textRight: {       
+        textAlign: 'right',
+        '& button': {
+            fontSize: '12px',
+            textTransform: 'capitalize',
+        }
+        
+    }
 }));
 export default function FilterPanel() {
     const classes = useStyles();

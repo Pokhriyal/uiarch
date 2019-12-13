@@ -16,19 +16,30 @@ const useStyles = makeStyles(theme => ({
         padding: '15px',
         background: '#ffff',
     },
+    h4: {
+        fontWeight: 'normal',
+    },
     titleActions: {
         textAlign: 'right',
         position: 'relative',
-        top: '10px',
+        top: '8px',
     },
     btncolor: {
         color: 'gray',
         fontSize: '12px',
         marginRight: '10px',
+        textTransform: 'capitalize',
         "&:hover": {
             background: 'transparent'
-        }
-    }
+        },  
+        '& svg': {
+            color: 'grey',
+            fontSize: '18px',
+            marginRight: '5px',
+            marginTop:'-3px',
+        }      
+    },
+    
 }));
 export default function TitleBar() {
     const classes = useStyles();
@@ -36,7 +47,7 @@ export default function TitleBar() {
         <div className={classes.root}>
             <Grid container>
                 <Grid item xs={5}>
-                    <Typography variant="h4" component="h2">
+                    <Typography variant="h4" component="h2" fontWeight="fontWeightRegular">
                         Auto Insurance Claim 2.0
                 </Typography>
                     <Typography variant="caption" gutterBottom>
@@ -57,9 +68,13 @@ export default function TitleBar() {
                         <Button size="large" className={classes.btncolor}>
                             <PublishIcon />Export
                         </Button>
-                        <Fab size="small" color="secondary" aria-label="add" className={classes.btncolor}>
+                        {/* <Fab size="small" color="default" aria-label="add" className={classes.btncolor}>
                             <MoreVertIcon />
-                        </Fab>
+                        </Fab> */}
+                        <IconButton size="small">
+                            <MoreVertIcon />
+                        </IconButton>
+        
                     </div>
                 </Grid>
 
