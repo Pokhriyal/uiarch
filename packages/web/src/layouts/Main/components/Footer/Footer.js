@@ -45,11 +45,30 @@ const Footer = props => {
 
 
     <BottomNavigation 
-    value={value} onChange={handleChange} className={classes.root} selected={classes.bottomNavigationColor}>
-      <BottomNavigationAction className={classes.bottomNavigationColor} label="Home" value="home"  icon={<HomeOutlinedIcon />} />
-      <BottomNavigationAction className={classes.bottomNavigationColor} color="inherit" label="Dashboard" value="dashboard" icon={<DashboardOutlinedIcon />} />
-      <BottomNavigationAction className={classes.bottomNavigationColor} label="Search" value="search" icon={<SearchOutlinedIcon />} />
-      <BottomNavigationAction className={classes.bottomNavigationColor} label="Notifications" value="notifications" icon={<NotificationsIcon />} />
+    value={value} onChange={handleChange} className={classes.root}>
+      <BottomNavigationAction
+      classes={{
+        root: classes.bottomNavigationColor, // class name, e.g. `classes-nesting-root-x`
+        selected: classes.bottomNavigationColor,
+        wrapper: classes.bottomNavigationColor,// class name, e.g. `classes-nesting-label-x`
+      }} label="Home" value="home"  icon={<HomeOutlinedIcon />} />
+      <BottomNavigationAction 
+      classes={{
+        root: classes.bottomNavigationColor, // class name, e.g. `classes-nesting-root-x`
+        selected: classes.bottomNavigationColor,
+        wrapper: classes.bottomNavigationColor,// class name, e.g. `classes-nesting-label-x`
+      }} color="inherit" label="Dashboard" value="dashboard" icon={<DashboardOutlinedIcon />} />
+      <BottomNavigationAction 
+      classes={{
+        root: classes.bottomNavigationColor, // class name, e.g. `classes-nesting-root-x`
+        selected: classes.bottomNavigationColor,
+        wrapper: classes.bottomNavigationColor,// class name, e.g. `classes-nesting-label-x`
+      }} label="Search" value="search" icon={<SearchOutlinedIcon />} />
+      <BottomNavigationAction classes={{
+        root: classes.bottomNavigationColor, // class name, e.g. `classes-nesting-root-x`
+        selected: classes.bottomNavigationColor,
+        wrapper: classes.bottomNavigationColor,// class name, e.g. `classes-nesting-label-x`
+      }} label="Notifications" value="notifications" icon={<NotificationsIcon />} />
     </BottomNavigation>
 
 
