@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     width: '116px'
   },
   MainNavigation: {
-    color: 'red',
+    color: theme.palette.white,
     '& > * + *': {
       marginLeft: theme.spacing(4),
       
