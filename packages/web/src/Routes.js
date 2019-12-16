@@ -14,7 +14,7 @@ import {
   // Settings as SettingsView,
   // SignUp as SignUpView,
   // SignIn as SignInView,
-  NotFound as NotFoundView
+   NotFound as NotFoundView
 } from './views';
 
 const Routes = () => {
