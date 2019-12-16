@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Grid, Typography } from '@material-ui/core';
-import {
-  AskmeResult,
-} from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -21,14 +18,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Askme = () => {
+const AskmeResult = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-        <AskmeResult />
+      <h1>Ask me Result</h1>
     </div>
   );
 };
 
-export default Askme;
+export default AskmeResult;
