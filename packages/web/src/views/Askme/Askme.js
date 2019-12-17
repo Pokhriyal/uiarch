@@ -7,7 +7,6 @@ import {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(4)
   },
   content: {
     paddingTop: 150,
@@ -27,6 +26,7 @@ const Askme = () => {
   return (
     <div className={classes.root}>
         <AskmeResult />
+      
     </div>
   );
 };

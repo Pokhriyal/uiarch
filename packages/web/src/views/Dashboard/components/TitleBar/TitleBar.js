@@ -39,8 +39,7 @@ const useStyles = makeStyles(theme => ({
             marginRight: '5px',
             marginTop:'-3px',
         }      
-    },
-    
+    }
 }));
 export default function TitleBar() {
     const classes = useStyles();
