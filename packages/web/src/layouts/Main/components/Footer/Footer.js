@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
-import { Typography, Link,  } from '@material-ui/core';
+import { Typography, Link, Hidden  } from '@material-ui/core';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import FolderIcon from '@material-ui/icons/Folder';
@@ -43,6 +43,7 @@ const Footer = props => {
       className={clsx(classes.root, className)}
     >
 
+<Hidden mdUp>
 
     <BottomNavigation 
     value={value} onChange={handleChange} className={classes.root}>
@@ -87,6 +88,8 @@ const Footer = props => {
         Created with love for the environment. By designers and developers who
         love to work together in offices!
       </Typography> */}
+
+</Hidden>
     </div>
   );
 };

@@ -42,16 +42,35 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   fixedHeightCard: {
+    width: '270px',
     height: '280px',
-    paddingLeft: '0',
-    paddingRight: '0',
+    paddingLeft: 0,
     borderRadius: '7px',
-    width: '480px',
-    marginRight: '20px'
+    paddingRight: 0,
+    margin: '20px',
+    marginRight: '20px',
+    marginLeft: '5px'
+  },
+  contentContainer: {
+    width: '100%',
+    maxWidth: '70%',
+    
+    [theme.breakpoints.down('sm')]: {
+        maxWidth: '95%'
+    }
   },
   cardDetails: {
-      display: 'flex'
+      display: 'flex',
+      flexWrap: 'wrap',
+      [theme.breakpoints.down('sm')]: {
+        display: '-webkit-box',
+        flexWrap: 'wrap',
+        overflow: 'auto',
+        padding: '20px 0'
+      },
   },
+
+  
   allDashboardWorkspace:{
     padding: '12px'
   }
